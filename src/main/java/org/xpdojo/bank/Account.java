@@ -3,11 +3,6 @@ package org.xpdojo.bank;
 public class Account {
 
     private String accountNumber;
-
-    public int getBalance() {
-        return balance;
-    }
-
     private int balance;
 
 
@@ -16,15 +11,11 @@ public class Account {
         this.balance = 0;
     }
 
-
-
-    public String getAccountNumber() {
-        return accountNumber;
+    public int getBalance() {
+        return balance;
     }
 
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
+
 
     public void deposit(int amount) {
         balance = balance + amount;
@@ -37,4 +28,5 @@ public class Account {
         }
         balance = remainingBalance;
     }
+
 }
