@@ -29,4 +29,12 @@ public class Account {
     public void deposit(int amount) {
         balance = balance + amount;
     }
+
+    public void withdraw(int amount) {
+        int remainingBalance = balance - amount;
+        if(remainingBalance < 0){
+            throw new RuntimeException();
+        }
+        balance = remainingBalance;
+    }
 }
